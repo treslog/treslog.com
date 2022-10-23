@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Home from "../components/Home.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Treslog | Tristan Vidal Portfolio 🔥">
+  <main class="bg-black">
+    <Nav />
+    <Home />
+    <Projects />
+    <About />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  html{
+    color-scheme: dark;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  :root {
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --color-bg: hsl(0, 0%, 0%);
+  }
+  html {
+    font-size: var(--font-size-base);
+    background-color: var(--color-bg);
+    scroll-behavior: smooth;
+  }
+</style>

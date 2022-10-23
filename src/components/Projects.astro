@@ -1,0 +1,77 @@
+---
+import Card from "./Card.astro";
+const projects = [
+  {
+    title: "Gif App",
+    description:
+      "Gif search app using the GIPHY API. A library called Geist are used for the UI.",
+    tags: ["React", "Vite", "Vercel"],
+    thumbnail: "gifapp.jpg",
+    link: "https://gif-find.vercel.app",
+    codeLink: "https://github.com/treslog/gif-app",
+  },
+  {
+    title: "Whois Search",
+    description: "Whois finder for domains. It was built using vanilla JavaScript and an API from RapidAPI.",
+    tags: ["JavaScript Vanilla", "RapidAPI", "Tailwind", "Vite"],
+    thumbnail: "whois.jpg",
+    link: "#",
+    codeLink: "#",
+  },
+  {
+    title: "Student Management System",
+    description: "Student manager created with Flask that allows you to do the typical CRUD actions.",
+    tags: ["Python", "Flask"],
+    thumbnail: "students.jpg",
+    link: "https://treslog.pythonanywhere.com",
+    codeLink: "https://github.com/treslog/flask-students",
+  },
+  {
+    title: "Web Panel",
+    description: "Administrative panel created with NextJS. It has authentication using Auth0.",
+    tags: ["NextJS", "Auth0", "React"],
+    thumbnail: "panel.jpg",
+    link: "https://univalle.vercel.app",
+    codeLink: "#",
+  },
+];
+---
+
+<section class="">
+  <hr
+    class="border-[rgb(31,32,47)] max-w-[520px] xl:max-w-[890px] self-center mx-auto my-[120px]"
+  />
+
+  <article
+    class="w-full sm:w-3/4 xl:w-4/6 2xl:w-3/5 max-w-3xl m-auto px-5 text-center sm:text-left"
+  >
+    <h2 id="projects" class="text-5xl leading-normal font-extrabold text-white">
+      Projects
+    </h2>
+    <p class="text-gray font-semibold text-lg pt-3 mb-10 2xl:pl-0">
+      A list of the projects I've worked on or I'm currently working on.
+    </p>
+    <div class="grid sm:grid-cols-2 gap-4 place-content-center mx-6 sm:mx-0">
+      {projects.map((project, index) => <Card {project} key={index} />)}
+    </div>
+  </article>
+</section>
+
+<style>
+  /* h2 {
+    animation: flow 5s ease-in-out infinite;
+    background: linear-gradient(-90deg,#007CF0,#923ee5,#00DFD8);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
+
+  section {
+    background: radial-gradient(
+      ellipse 50% 50% at 60% 50%,
+      rgba(28, 44, 169, 0.153),
+      rgba(19, 136, 165, 0)
+    );
+  }
+</style>
