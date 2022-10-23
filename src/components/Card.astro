@@ -4,15 +4,21 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
 ---
 
 <div
-  class="item rounded-xl bg-[rgba(255,255,255,0.06)] border border-[#252726] hover:border-[#514d51] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
+  class="wait item rounded-xl bg-[rgba(255,255,255,0.06)] border border-[#252726] hover:border-[#514d51] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
 >
   <div class="flex flex-col">
     <div class="hover:cursor-pointer">
-      <img
-        class="w-full h-32 object-cover rounded-t-xl"
-        src={thumbnail}
-        alt={title}
-      />
+      <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      >
+        <img
+          class="w-full h-32 object-cover rounded-t-xl"
+          src={thumbnail}
+          alt={title}
+        />
+      </a>
     </div>
 
     <div class="py-3 px-6">
@@ -98,4 +104,42 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
   .item {
     transition: 0.3s;
   }
+
+  .wait {
+    opacity: 0;
+  }
+
+  .show {
+    opacity: 1;
+    animation: 1000ms ease 100ms 1 normal backwards running tres;
+  }
+
+  @keyframes tres {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
 </style>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }
+  );
+
+  const hidden = document.querySelectorAll(".wait");
+  hidden.forEach((section) => {
+    observer.observe(section);
+  });
+</script>
