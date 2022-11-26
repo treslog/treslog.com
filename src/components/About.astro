@@ -1,4 +1,4 @@
-<section id="about" class="">
+<section id="about" class="wait item">
   <hr
     class="border-[rgb(31,32,47)] max-w-[520px] xl:max-w-[890px] self-center mx-auto my-[120px]"
   />
@@ -6,7 +6,7 @@
   <article
     class="w-full sm:w-3/4 xl:w-4/6 2xl:w-3/5 max-w-3xl m-auto px-5 text-center sm:text-left"
   >
-    <h2 id="projects" class="text-5xl leading-normal font-extrabold text-white">
+    <h2 class="text-5xl leading-normal font-extrabold text-white">
       About
     </h2>
     <p class="text-gray font-semibold text-lg pt-3 mb-10 2xl:pl-0">
@@ -40,14 +40,6 @@
 </section>
 
 <style>
-  /* h2 {
-    animation: flow 5s ease-in-out infinite;
-    background: linear-gradient(-90deg,#007CF0,#923ee5,#00DFD8);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  } */
 
   section {
     background: radial-gradient(
@@ -55,5 +47,29 @@
       rgba(204, 29, 157, 0.059),
       rgba(255, 255, 255, 0)
     );
+  }
+
+  .item {
+    transition: 0.3s;
+  }
+
+  .wait {
+    opacity: 0;
+  }
+
+  .show {
+    opacity: 1;
+    animation: 1000ms ease 100ms 1 normal backwards running tres;
+  }
+
+  @keyframes tres {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
   }
 </style>

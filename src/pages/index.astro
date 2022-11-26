@@ -35,3 +35,21 @@ import Footer from "../components/Footer.astro";
     scroll-behavior: smooth;
   }
 </style>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }
+  );
+
+  const hidden = document.querySelectorAll(".wait");
+  hidden.forEach((section) => {
+    observer.observe(section);
+  });
+</script>
