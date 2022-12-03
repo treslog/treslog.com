@@ -2,12 +2,14 @@
 import MainLogo from "./logos/Main.astro";
 ---
 
-<script defer>
-  const buttonMobileMenu = document.querySelector("#button-mobile-menu");
-  const mobileMenu = document.querySelector("#mobile-menu");
-  buttonMobileMenu.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+<script>
+const buttonMobileMenu = document.getElementById("button-mobile-menu");
+const mobileMenu = document.getElementById("mobile-menu");
+buttonMobileMenu.addEventListener("click", toggleMobileMenu);
+
+function toggleMobileMenu() {
+  mobileMenu.classList.toggle("hidden");
+}
 </script>
 
 <nav
