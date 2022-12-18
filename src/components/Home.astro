@@ -22,17 +22,21 @@ import Twitter from "./logos/Twitter.astro";
     alt="Avatar"
   />
   <article class="text-center 2xl:text-left">
-    <h1 class="text-white font-extrabold text-4xl sm:text-5xl mb-4 px-8 2xl:px-0">
+    <h1
+      class="text-white font-extrabold text-4xl sm:text-5xl mb-4 px-8 2xl:px-0"
+    >
       Hi, I'm <span class="gradient">Tristan</span>
     </h1>
     <p
       class="text-gray font-semibold text-lg sm:text-xl pb-1 px-8 2xl:px-0 max-w-xl 2xl:max-w-md mb-4"
     >
-    Critical thinking, decision making and problem solving skills.
-    I am committed to delivering high-quality, reliable products and take a critical view of the business and functionalities of the projects I work on.
+      Critical thinking, decision making and problem solving skills. I am
+      committed to delivering high-quality, reliable products and take a
+      critical view of the business and functionalities of the projects I work
+      on.
     </p>
     <div
-      class="flex text-gray gap-6 align-middle justify-center 2xl:align-baseline 2xl:justify-start"
+      class="flex text-gray gap-6 items-center justify-center 2xl:align-baseline 2xl:justify-start"
     >
       <a
         title="Twitter"
@@ -59,17 +63,29 @@ import Twitter from "./logos/Twitter.astro";
         <LinkedIn />
       </a>
       <a
-        title="resume"
+        title="View resume"
         href="https://resume.treslog.com"
         target="_blank"
         rel="noopener noreferrer"
-        class="cursor-pointer"
       >
-        <span
-          class="text-white text-sm font-semibold px-4 py-1.5 border border-[#7928CA] p-1 rounded shadow-xl hover:shadow-[#ff008029] hover:saturate-150 transition duration-700 hover:bg-[#7928CA]"
+        <div
+          class="text-white text-sm font-semibold px-4 py-1.5 border border-[#7928CA] p-1 rounded shadow-xl hover:shadow-[#ff008029] hover:saturate-150 transition duration-700 hover:bg-[#7928CA] flex flex-row items-center justify-center"
         >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            class="h-4 w-4 mr-2"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+            ></path>
+          </svg>
           View resume
-        </span>
+        </div>
       </a>
     </div>
   </article>
