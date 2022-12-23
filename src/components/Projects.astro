@@ -14,7 +14,7 @@ const projects = [
     title: "Whois Search",
     description:
       "This domain whois finder was built using vanilla JavaScript and the RapidAPI API. It allows users to search for information about a specific domain.",
-    tags: ["JavaScript Vanilla", "RapidAPI", "Tailwind", "Vite"],
+    tags: ["Vanilla", "RapidAPI", "Tailwind", "Vite"],
     thumbnail: "whois.webp",
     link: "https://whoisapp.vercel.app",
     codeLink: "https://github.com/treslog/whois",
@@ -57,13 +57,13 @@ const projects = [
   <article
     class="w-full sm:w-3/4 xl:w-4/6 2xl:w-3/5 max-w-3xl m-auto px-5 xl:px-0 text-center sm:text-left"
   >
-    <h2 class="text-5xl leading-normal font-extrabold text-white">
+    <h2 class="text-5xl leading-normal font-extrabold text-white tracking-tight">
       Projects
     </h2>
-    <p class="text-gray font-semibold text-lg pt-3 mb-10 2xl:pl-0">
+    <p class="text-gray font-semibold text-lg pt-3 mb-10 2xl:pl-0 tracking-tight">
       A list of the projects I've worked on or I'm currently working on.
     </p>
-    <div class="grid sm:grid-cols-2 gap-4 place-content-center mx-6 sm:mx-0">
+    <div class="grid xl:grid-cols-2 gap-4 place-content-center mx-6 sm:mx-0">
       {projects.map((project, index) => <Card {project} key={index} />)}
     </div>
   </article>
