@@ -4,17 +4,17 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
 ---
 
 <div
-  class="wait item rounded-xl bg-[rgba(255,255,255,0.06)] border border-[#252726] hover:border-[#514d51] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 tracking-tight"
+  class="wait item rounded bg-[rgba(0,0,0,0.39)] border border-[#252726] hover:border-[#c1c1c1] transition ease-in-out delay-150 duration-300 tracking-tight"
 >
   <div class="flex flex-col">
-    <div class="hover:cursor-pointer">
+    <div class="hover:cursor-pointer border-b-[#252726] border-b">
       <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       >
         <img
-          class="w-full h-32 object-cover rounded-t-xl"
+          class="w-full h-32 object-cover rounded-t"
           src={thumbnail}
           alt={title}
         />
@@ -22,18 +22,18 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
     </div>
 
     <div class="py-3 px-6">
-      <span class="font-semibold text-white">{title}</span>
+      <span class="font-semibold text-white text-lg">{title}</span>
       <div class="my-2">
         {
           tags.map((tag) => (
-            <span class="text-gray font-semibold text-[12px] border-[#3b3d40c2] border rounded p-1 mr-2">
+            <span class="text-white bg-black font-semibold text-[12px] border-[#252726] border rounded-full p-1 px-2 mr-2">
               {tag}
             </span>
           ))
         }
       </div>
 
-      <p class="[font-size:15px] font-semibold text-gray mb-3 h-20">
+      <p class="[font-size:15px] text-gray mb-3 min-h-[64px]">
         {description}
       </p>
       <div class="flex flex-row items-center justify-center mb-2">
@@ -71,7 +71,7 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
           rel="noopener noreferrer"
         >
           <div
-            class="text-white font-semibold text-xs border-[#3b3d40c2] border rounded w-30 text-center p-2 hover:border-white hover:text-white transition duration-700 flex flex-row"
+            class="text-white font-semibold text-xs border-[#3b3d40c2] border rounded w-30 text-center p-2 hover:border-blue hover:text-white transition duration-700 flex flex-row"
           >
             
             <svg
