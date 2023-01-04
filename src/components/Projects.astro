@@ -55,15 +55,15 @@ const projects = [
   />
 
   <article
-    class="w-full sm:w-3/4 xl:w-4/6 2xl:w-3/5 max-w-3xl m-auto px-5 xl:px-0 text-center sm:text-left"
+    class="w-full max-w-3xl px-5 m-auto text-center sm:w-3/4 xl:w-4/6 2xl:w-3/5 xl:px-0 sm:text-left"
   >
-    <h2 class="text-5xl leading-normal font-extrabold text-white tracking-tight">
+    <h2 class="text-5xl font-extrabold leading-normal tracking-tight text-white">
       Projects
     </h2>
-    <p class="text-gray font-semibold text-lg pt-3 mb-10 2xl:pl-0 tracking-tight">
+    <p class="pt-3 mb-10 text-lg font-semibold tracking-tight text-gray 2xl:pl-0">
       A list of the projects I've worked on or I'm currently working on.
     </p>
-    <div class="grid xl:grid-cols-2 gap-12 place-content-center mx-6 sm:mx-0">
+    <div class="grid gap-12 mx-6 xl:grid-cols-2 place-content-center sm:mx-0">
       {projects.map((project, index) => <Card {project} key={index} />)}
     </div>
   </article>

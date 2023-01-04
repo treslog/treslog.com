@@ -14,15 +14,15 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
       rel="noopener noreferrer"
       >
         <img
-          class="w-full h-32 object-cover rounded-t"
+          class="object-cover w-full h-32 rounded-t"
           src={thumbnail}
           alt={title}
         />
       </a>
     </div>
 
-    <div class="py-3 px-6">
-      <span class="font-semibold text-white text-lg">{title}</span>
+    <div class="px-6 py-3">
+      <span class="text-lg font-semibold text-white">{title}</span>
       <div class="my-2">
         {
           tags.map((tag) => (
@@ -53,7 +53,7 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 512 512"
-              class="h-4 w-4 mr-2"
+              class="w-4 h-4 mr-2"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const { title, description, tags, thumbnail, link, codeLink } = project;
           >
             
             <svg
-              class="mr-2 w-4 h-4 self-center"
+              class="self-center w-4 h-4 mr-2"
               style="transition: 0.1s;"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
